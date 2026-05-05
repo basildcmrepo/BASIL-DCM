@@ -93,7 +93,7 @@ If you use this code or model in your research, please cite our paper:
 
 ```bibtex
 @inproceedings{basil2026,
-  title={Estimating the directed, weighted, and signed network of influences among brain regions from fMRI},
+  title={BASIL-DCM: Biophysical Amortized Scalable Inference for Latent Dynamic Causal Modeling},
   author={Author Names},
   booktitle={Placeholder},
   year={2026}
