@@ -1,8 +1,15 @@
-# BASIL-DCM: Physics-Informed Amortized Inference for Effective Connectivity
+# BASIL-DCM: Biophysical Amortized Scalable Inference for Latent Dynamic Causal Modeling
 
 This repository contains the official PyTorch implementation of **BASIL** (Physics-Informed Amortized Inference Model), as introduced in our NeurIPS paper: *Estimating the directed, weighted, and signed network of influences among brain regions from fMRI*.
 
 BASIL addresses the computational bottleneck of classical Dynamic Causal Modeling (DCM) by using amortized inference. It combines a Mamba-based temporal encoder with an ROI-wise Spatial Transformer to estimate subject-specific directed connectivity and biophysical DCM parameters in a single forward pass, regularized by a differentiable cross-spectral density (CSD) objective.
+
+![Overview of BASIL . BASIL amortizes DCM inversion by mapping resting-state fMRI to
+subject-specific effective connectivity and biophysical parameters. ROI time series are first encoded
+by a Mamba-based temporal module with phase-aware timing features. A spatial Transformer then
+models adaptive inter-regional interactions. A subject-level FiLM module conditions connectivity
+prediction on global brain-state context. Estimated DCM parameters are passed through a differen-
+tiable CSD module, enforcing consistency with the DCM forward model in the spectral domain.](images/Fig1.jpg)
 
 ## 📂 Repository Structure
 
@@ -34,7 +41,7 @@ We recommend using a virtual environment (e.g., Conda) to manage dependencies.
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/YOUR-USERNAME/BASIL-DCM.git](https://github.com/YOUR-USERNAME/BASIL-DCM.git)
+   git clone https://github.com/basildcmrepo/BASIL-DCM.git
    cd BASIL-DCM
    ```
 
@@ -58,13 +65,13 @@ We recommend using a virtual environment (e.g., Conda) to manage dependencies.
 
 ## 📊 Dataset Preparation
 
-The model expects synthetic and empirical fMRI data derived from the Human Connectome Project (HCP). 
+The model expects empirical fMRI data derived from the Human Connectome Project (HCP). 
 
 Place your `.npz` parameter and time-series files inside the `data/DCM_params/` directory (or update the `DATA_DIR` path in the data loader). Ensure the following keys/files are present:
 * `time_series.npz` (Y)
 * `A.npz` (Effective Connectivity means)
 * `A_Vp.npz` (Effective Connectivity variances)
-* `transit.npz`, `decay.npz`, `epsilon.npz`, `aa.npz`, `b.npz`, `c.npz` (Biophysical parameters)
+* `transit.npz`, `aa.npz`, `b.npz`, `c.npz` (Biophysical parameters)
 * `CSD.npz` and `Hz.npz` (Cross-spectral density and frequency bins)
 
 ## 🚀 Training
@@ -85,7 +92,7 @@ If you use this code or model in your research, please cite our paper:
 @inproceedings{basil2026,
   title={Estimating the directed, weighted, and signed network of influences among brain regions from fMRI},
   author={Author Names},
-  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  booktitle={Placeholder},
   year={2026}
 }
 ```
