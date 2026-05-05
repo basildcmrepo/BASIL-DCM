@@ -1,4 +1,4 @@
-# BASIL-DCM: Biophysical Amortized Scalable Inference for Latent Dynamic Causal Modeling
+# <img src="images/logo.png" alt="BASIL Logo" width="40" align="top"/> BASIL-DCM: Biophysical Amortized Scalable Inference for Latent Dynamic Causal Modeling
 
 This repository contains the official PyTorch implementation of **BASIL** (Physics-Informed Amortized Inference Model), as introduced in our NeurIPS paper: *Estimating the directed, weighted, and signed network of influences among brain regions from fMRI*.
 
