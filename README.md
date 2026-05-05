@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="images/logo.png" alt="BASIL Logo" width="70" align="middle"/> 
+  <img src="images/logo.png" alt="BASIL Logo" width="60" align="middle"/> 
   BASIL-DCM: Biophysical Amortized Scalable Inference for Latent Dynamic Causal Modeling
 </h1>
 
